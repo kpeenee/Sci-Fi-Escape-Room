@@ -16,6 +16,7 @@ public class PlayerLook : MonoBehaviour
     {
         Debug.Log(transform.right);
         xAxisClamp = 0.0f;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame

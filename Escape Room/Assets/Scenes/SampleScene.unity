@@ -5917,6 +5917,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door wall
       objectReference: {fileID: 0}
+    - target: {fileID: 2290638008656234463, guid: c1b514f13aa3f704b827ea2081743702,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: c1b514f13aa3f704b827ea2081743702,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5986,11 +5991,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290638008656234463, guid: c1b514f13aa3f704b827ea2081743702,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4575812678347287078, guid: c1b514f13aa3f704b827ea2081743702,
         type: 3}
