@@ -2,12 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FindInteract : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
     [SerializeField] LayerMask interactableLayer;
     [SerializeField] float distance = 1f;
+    [SerializeField] Text interactText;
+    [SerializeField] Canvas interactCanvas;
 
     Iinteractable currentInteractable;
 
@@ -36,12 +39,13 @@ public class FindInteract : MonoBehaviour
         if(Physics.Raycast(ray,out hitInfo, distance, interactableLayer))
         {
             currentInteractable = hitInfo.collider.GetComponent<Iinteractable>();
-            Debug.Log("ItemHit");
+            interactCanvas.enabled = true;
+            interactText.text = "Press E to interact";
         }
         else
         {
             currentInteractable = null;
-            Debug.Log("NoItem");
+            interactCanvas.enabled = false;
         }
     }
 }
