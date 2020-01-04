@@ -14,6 +14,7 @@ public class Beaker : MonoBehaviour, Iinteractable
     {
         if(currentValue == 0)
         {
+            FindObjectOfType<GameManager>().setHasLockerKey(true);
             Destroy(key);
         }
     }
