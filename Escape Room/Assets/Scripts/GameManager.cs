@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] bool hasLockerKey = false;
+    [SerializeField] bool hasCode = false;
 
     public void setHasLockerKey(bool key)
     {
@@ -14,5 +15,15 @@ public class GameManager : MonoBehaviour
     public bool getHasLockerKey()
     {
         return hasLockerKey;
+    }
+
+    public void setHasCode(bool code)
+    {
+        hasCode = code;
+    }
+
+    public bool GetHasCode()
+    {
+        return hasCode;
     }
 }

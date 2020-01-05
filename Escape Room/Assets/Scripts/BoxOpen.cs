@@ -5,6 +5,7 @@ using UnityEngine;
 public class BoxOpen : MonoBehaviour,Iinteractable
 {
     [SerializeField] CodeLock[] code;
+    
 
     public void Interact()
     {
@@ -17,6 +18,7 @@ public class BoxOpen : MonoBehaviour,Iinteractable
             }
             
         }
-        Debug.Log("unlocked");
+        transform.parent.parent.gameObject.GetComponent<Animator>().SetBool("isOpen", true);
+        FindObjectOfType<GameManager>().setHasCode(true);
     }
 }
