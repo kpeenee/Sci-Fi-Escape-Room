@@ -5,8 +5,13 @@ using UnityEngine;
 public class Computer : MonoBehaviour, Iinteractable
 {
     private string show = "Computer";
+    AudioSource doorSound;
     [SerializeField] private GameObject interactWith;
 
+    private void Start()
+    {
+        doorSound = GetComponent<AudioSource>();
+    }
     public void Interact()
     {
         Animator door = interactWith.GetComponent<Animator>();
@@ -20,6 +25,6 @@ public class Computer : MonoBehaviour, Iinteractable
             Debug.Log("Closing");
             door.SetBool("isOpen", true);
         }
-        
+        doorSound.Play();
     }
 }
