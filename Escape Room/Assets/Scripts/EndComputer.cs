@@ -8,7 +8,12 @@ public class EndComputer : MonoBehaviour, Iinteractable
     {
        if (FindObjectOfType<GameManager>().GetHasCode())
         {
+            Cursor.lockState = CursorLockMode.None;
             FindObjectOfType<SceneLoader>().LoadMainMenu();
+        }
+        else
+        {
+            FindObjectOfType<Indicate>().SetIndicator("I need to fond the code to escape");
         }
     }
 }

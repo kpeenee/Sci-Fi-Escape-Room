@@ -16,6 +16,11 @@ public class Beaker : MonoBehaviour, Iinteractable
         {
             FindObjectOfType<GameManager>().setHasLockerKey(true);
             Destroy(key);
+            FindObjectOfType<Indicate>().SetIndicator("I got a key");
+        }
+        else
+        {
+            FindObjectOfType<Indicate>().SetIndicator("I cant put my hand in that");
         }
     }
 

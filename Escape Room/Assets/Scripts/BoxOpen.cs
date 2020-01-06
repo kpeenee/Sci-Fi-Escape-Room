@@ -20,5 +20,6 @@ public class BoxOpen : MonoBehaviour,Iinteractable
         }
         transform.parent.parent.gameObject.GetComponent<Animator>().SetBool("isOpen", true);
         FindObjectOfType<GameManager>().setHasCode(true);
+        FindObjectOfType<Indicate>().SetIndicator("I got the code to escape");
     }
 }
