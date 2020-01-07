@@ -13,7 +13,7 @@ public class EndComputer : MonoBehaviour, Iinteractable
         }
         else
         {
-            FindObjectOfType<Indicate>().SetIndicator("I need to fond the code to escape");
+            FindObjectOfType<Indicate>().SetIndicator("I need to find the code to escape");
         }
     }
 }
